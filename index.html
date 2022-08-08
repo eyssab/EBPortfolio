@@ -124,7 +124,7 @@ Now, we will begin our HTML document using the <html> tag.
                 <ul id="navbar">
                     <li><a href="#about-me-section">About me</a></li>
                     <li><a href="#projects-section">Projects</a></li>
-                    <li><a href="#photography-section">Photography</a></li>
+                    <li><a href="#links-section">Links</a></li>
                     <li><a href="#future-section">Future</a></li>
                 </ul>
 
@@ -143,24 +143,12 @@ Now, we will begin our HTML document using the <html> tag.
             for this.
             -->
             <div id="content">
-                <!--
-                The content area will have sections corresponding to the links
-                we added to the navbar. Clicking on one of the links will take
-                you to that section on the page.
-                Since we're now going to have more than one of the same kind of
-                thing (sections), it's appropriate to start using classes.
-                HTML has a "section" tag, but it doesn't actually do anything so
-                we will still need to style it using CSS. Each section will have
-                both a class "content-section" so we can apply rules to _all_
-                sections, as well as a unique ID so that our anchor links work.
-                -->
                 <section class="content-section" id="about-me-section">
                     <h1><a href="#about-me-section">§</a> About me</h1>
                     <p>
                         Hello there! My name is Eyssa Benhida. I am an undergraduate
                         student at UMass Amherst studying computer science. Some of my interests are
-                        coding, biking, track and field, swimming, hiking, trying out new foods, and
-                        photography.
+                        coding, biking, track and field, video games, and trying out new foods.
                     </p>
                     <p>
                         <!--
@@ -181,97 +169,47 @@ Now, we will begin our HTML document using the <html> tag.
                         Here is a selection of some of the projects I am most
                         proud of:
                         <ul>
-                            <!--
-                            You can do some text styling in HTML. <strong> by
-                            default makes your text bold and <em> emphasizes
-                            your text by making it italic. These are preferred
-                            today over <b> and <i> because they don't have a
-                            specific style associated with them and stylesheet
-                            developers can override the defaults without it
-                            being weird. (For example, by changing strong to
-                            underline text instead of make it bold.)
-                            -->
-                            <li>
-                                <strong>Wonky Golf</strong> 3D Mini Golf game built in Unity using C# and
-                                Blender for my high school Senior Internship <em>Written
-                                in C#.</em>
+                          <li>
+                                <strong>Easy Grader</strong> Easy to use Android app for generating, grading,   
+                                storing, and timing practice exam answer sheets written entirely in
+                                <em> Java</em>
                                 <br>
-                                Links:
-                                <a href="https://eyssa-benhida.itch.io/wonky-golf">Website</a>
-                                <a href="https://github.com/eyssab/WonkyGolf">Github</a>
+                                Link:
+                                <a href="https://github.com/eyssab/WheelSpinner">Play Store</a>
                             </li>
                             <li>
-                                <strong>Wheel Spinner</strong> Fully customizable 2D wheel spinner
-                                written in Java using LibGDX. Involves array lists, vector math, matrices,
-                                and lots of other math to get the rotations, sizes,
-                                colors, texts, etc to work properly<em>Written in Java.</em>
+                                <strong>Wonky Golf</strong> 3D Mini Golf game built in <em>Unity using C# and 
+                                Blender᠎ </em> for my high school Senior Internship
                                 <br>
-                                Links:
-                                <a href="https://github.com/eyssab/WheelSpinner">Github</a>
+                                Link:
+                                <a href="https://eyssa-benhida.itch.io/wonky-golf">Itch.io</a>
                             </li>
                             <li>
                                 <strong>The Hunted</strong> 3D Hide and Seek game with AI
-                                built in Unity using C#. Made for submission to the MIT
-                                Blueprint 2020 Hackathon <em>Written in C#</em>
+                                built in<em> Unity using C#</em>. Made for submission to the MIT
+                                Blueprint 2020 Hackathon
                                 <br>
-                                Links:
-                                <a href="https://eyssa-benhida.itch.io/the-hunted">Website</a>
-                                <a href="https://github.com/eyssab/The-Hunted">Github</a>
+                                Link:
+                                <a href="https://eyssa-benhida.itch.io/the-hunted">Itch.io</a>
                             </li>
                         </ul>
                     </p>
                 </section>
-                <section class="content-section" id="photography-section">
-                    <h1><a href="#photography-section">§</a> Photography</h1>
+                <section class="content-section" id="links-section">
+                    <h1><a href="#links-section">§</a> Links</h1>
                     <p>
-                        I like to take pictures! Please take a look at some of the photos I have taken over the years.
+                        Some cool links:
                     </p>
-                    <!--
-                    This section shows how to create tables. This is an _okay_
-                    way of doing complicated formatting. Ideally you would use
-                    CSS grids or flexboxes or use a library like Bootstrap that
-                    does it for you, but this is fine for now as a beginner
-                    project.
-                    <tr> means "table row" and <td> means "table data cell
-                    element" (basically, one entry in the table).
-                    An <img> tag loads an image. If you have images you'd like
-                    to include without posting them on the web, you can just
-                    put them in the same folder as this file then put their name
-                    directly as the value for the src attribute.
-                    It is generally considered rude to embed images from other
-                    sites since it can eat up a lot of their bandwidth, but
-                    since this is such a small class I don't think Wikimedia
-                    will mind.
-                    -->
                     <table class="gallery">
-                        <tr>
-                            <td>
-                                <img src="/static/hercules.JPG">
-                            </td>
-                            <td>
-                                <img src="/static/castle.jpg">
-                            </td>
-                            <td>
-                                <img src="/static/waterface.jpg">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="/static/chicago.jpg">
-                            </td>
-                            <td>
-                                <img src="/static/spain.jpg">
-                            </td>
-                            <td>
-                                <img src="/static/wagon.jpg">
-                            </td>
-                        </tr>
-                    </table>
-                    <p>
-                        <small>
-                            These photos are from my trips to Chicago, Morocco, and Spain
-                        </small>
-                    </p>
+                      <li>
+                        <a href="https://github.com/eyssab">Github</a>
+                    </li>
+                      <li>
+                        <a href="https://eyssa-benhida.itch.io">Itch.io</a>
+                    </li>
+                      <li>
+                        <a href="https://eyssa-benhida.itch.io/the-hunted">Website</a>
+                    </li>
                 </section>
                 <!--
                 Adder section: Future Plans
