@@ -1,5 +1,3 @@
-
-
 <!--
 Copyright 2021 Simon Andrews
 This work is subject to the terms of the Creative Commons Attribution-ShareAlike
@@ -7,242 +5,174 @@ This work is subject to the terms of the Creative Commons Attribution-ShareAlike
 this file, You can obtain one at http://creativecommons.org/licenses/by-sa/4.0/.
 -->
 
-<!--
-This is an HTML file. HTML stands for "HyperText Markup Language." It is the
-format that all the websites you visit are written in.
-Any modern browser will allow you to view the HTML source code of any website.
-In Google Chrome, you can do this by right-clicking on a page and clicking the
-"View page source" button in the menu that appears. You can also click the
-"Inspect" button to open the Developer Console, then click the "Elements" tab
-to get a nicer, more interactive view of the page's code. (And many other
-things! Try poking around.)
-Everything between the two arrow-like symbols surrounding this text is a
-comment. Go through this file and follow the instructions in the comments to
-make your own portfolio page!
--->
-
-<!--
-Technically, all HTML documents must start with a doctype declaration, as
-written below. If you forget to include this, your browser probably won't mind
-though.
--->
 <!DOCTYPE html>
 
-<!--
-I added this to be able to see symbols properly
--->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-
-<!--
-Now, we will begin our HTML document using the <html> tag.
--->
 <html>
-    <!--
-    Now we will create the "head" of our document. All HTML documents have a
-    "head," where we set up the page by setting metadata, loading scripts and
-    stylesheets, and anything else we might need to do. The "body" has the
-    action content.
-    In LaTeX terms, an HTML document's head is like a LaTeX document's preamble
-    and an HTML document's body is like a LaTeX document's "document"
-    environment.
-    -->
-    <head>
-        <!--
-        First, we will set the title of your page. This is the text that appears
-        in your browser as the label for a tab.
-        -->
-        <title>Eyssa Benhida's Portfolio</title>
 
-        <!--
-        Next, we will load in a stylesheet. Stylesheets are written in a
-        language called CSS (Cascading StyleSheets). You will look at the
-        stylesheet once you are done with this file.
-        You _could_ do your styling right here in this HTML document, by using
-        the <style> tag or by setting style attributes for individual elements.
-        However this is generally considered to be bad practice.
-        -->
-        <link rel="stylesheet" href="style.css" />
-    </head>
+<head>
+    <title>Eyssa Benhida's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-    <!--
-    Now we will move on to the body of the document. As a reminder, this will
-    contain all of the actual content of your page.
-    -->
-    <body>
-        <!--
-        A "div" element specifies a division of your HTML document. It can be
-        used for grouping together things that should belong with one another.
-        This is useful for applying some style change to only _part_ of your
-        document. For example, if you want to have blog posts in black text and
-        alerts in red text, you could wrap up both in divs and apply those
-        styles to each seperately.
-        A div can have an "id" or a "class", which is a name associated with a
-        div that allows stylesheets and scripts to find it. There can only be
-        one div with a certain id, but there is no limit on the number of divs
-        that can have some class. You might use an id for a navigation bar (of
-        which there should only be one) and a class for an element on the
-        navigation bar (of which there will be many).
-        We will now create a div with id "container." The container will contain
-        all of our content while keeping it seperate from the body overall.
-        -->
-        <div id="container">
-            <!--
-            Let's make another div, for the header. This section will feature
-            your name, and some handy links.
-            Later, we will make other divs for the content and the footer.
-            -->
-            <div id="header">
-                <!--
-                First, since you are making a portfolio website you will want to
-                feature your own name prominently. We will use a <span>, which
-                is similar to a <div> but is typically used for smaller amounts
-                of the document.
-                -->
-                <span id="name">Eyssa Benhida</span>
+<body>
+    <div id="container">
+        <div id="header">
+            <span id="name">Eyssa Benhida</span>
+            <hr />
+            <ul id="navbar">
+                <li><a href="#about-me-section">About me</a></li>
+                <li><a href="#projects-section">Projects</a></li>
+                <li><a href="#links-section">Links</a></li>
+                <li><a href="#future-section">Future</a></li>
+                <a href="https://github.com/eyssab">Github</a>
+                <a href="https://eyssa-benhida.itch.io">Itch.io</a>
+            </ul>
+            <hr />
+        </div>
+    
+        <div id="content">
+            <section class="content-section" id="about-me-section">
+                <h1><a href="#about-me-section">§</a> About me</h1>
+                <p>
+                    Hello there! My name is Eyssa Benhida. I am an undergraduate
+                    student at UMass Amherst studying computer science. Some of my interests are
+                    coding, biking, track and field, video games, and trying out new foods.
+                </p>
+                <p>
+                    This is my personal website. Here, you will find some
+                    samples of my programming work. If after reviewing them
+                    you think you would like to hire me, please email me at
+                    <a href="mailto:eyssab@gmail.com">eyssab@gmail.com</a> so we
+                    can discuss.
+                </p>
+            </section>
 
-                <!--
-                To divide this content from the rest of the page, we will use a
-                horizontal line, which can be drawn using the hr tag.
-                -->
-                <hr />
-
-                <!--
-                Now let's put some links in! These will be "anchor" links that
-                make your browser scroll to a different section of the page,
-                instead of taking you to a whole new page. A link uses the tag
-                <a> and has an attribute called "href" that specifies where the
-                link takes you. You can tell an anchor link from a regular link
-                because it starts with a # character.
-                We will use the <ul> (unordered list) environment and fill it
-                with <li>s (list items). By default this produces a bullet list,
-                but with some CSS styling we can convert it into something that
-                looks a bit more like a navigation bar. Crucially since we apply
-                those styles selectively we can still use the regular old bullet
-                style <ul> anywhere else in the document!
-                -->
-                <ul id="navbar">
-                    <li><a href="#about-me-section">About me</a></li>
-                    <li><a href="#projects-section">Projects</a></li>
-                    <li><a href="#links-section">Links</a></li>
-                    <li><a href="#future-section">Future</a></li>
-                </ul>
-
-                <!--
-                One more horizontal line...
-                -->
-                <hr />
-
-                <!--
-                And that's the end of our header!
-                -->
-            </div>
-
-            <!--
-            Now we need to add the content of our page. We will need another div
-            for this.
-            -->
-            <div id="content">
-                <section class="content-section" id="about-me-section">
-                    <h1><a href="#about-me-section">§</a> About me</h1>
-                    <p>
-                        Hello there! My name is Eyssa Benhida. I am an undergraduate
-                        student at UMass Amherst studying computer science. Some of my interests are
-                        coding, biking, track and field, video games, and trying out new foods.
-                    </p>
-                    <p>
-                        <!--
-                        You can use "mailto:" followed by an email address to
-                        create a link that opens up the user's email client.
-                        -->
-                        This is my personal website. Here, you will find some
-                        samples of my programming work. If after reviewing them
-                        you think you would like to hire me, please email me at
-                        <a href="mailto:ebenhida@umass.edu">ebenhida@umass.edu</a> so we
-                        can discuss.
-                    </p>
-                </section>
-                <section class="content-section" id="projects-section">
-                    <h1><a href="#project-section">§</a> Projects</h1>
-
-                    <p>
-                        Here is a selection of some of the projects I am most
-                        proud of:
+            <section class="content-section" id="internship-section">
+                <h1><a href="#internship-section">§</a> Internships</h1>
+                <ul>
+                    <li>
+                        <strong>Software Engineering Intern</strong> at Amazon
                         <ul>
-                          <li>
-                                <strong>Easy Grader</strong> Easy to use Android app for generating, grading,   
-                                storing, and timing practice exam answer sheets written entirely in
-                                <em> Java</em>
-                                <br>
-                                Link:
-                                <a href="https://github.com/eyssab/WheelSpinner">Play Store</a>
-                            </li>
-                            <li>
-                                <strong>Wonky Golf</strong> 3D Mini Golf game built in <em>Unity using C# and 
-                                Blender᠎ </em> for my high school Senior Internship
-                                <br>
-                                Link:
-                                <a href="https://eyssa-benhida.itch.io/wonky-golf">Itch.io</a>
-                            </li>
-                            <li>
-                                <strong>The Hunted</strong> 3D Hide and Seek game with AI
-                                built in<em> Unity using C#</em>. Made for submission to the MIT
-                                Blueprint 2020 Hackathon
-                                <br>
-                                Link:
-                                <a href="https://eyssa-benhida.itch.io/the-hunted">Itch.io</a>
-                            </li>
+                            <li><strong>Duration:</strong> Summer 2023</li>
+                            <li><strong>Description:</strong> Designed and implemented a scalable, automated AWS architecture for general use, handling data ingestion,
+                                transformation, storage, and maintaining data freshness</li>
+                            <li><strong>Technologies:</strong> Java, Typescript, AWS: CDK, Lambda, S3, Batch, SQS, SNS, CI/CD Pipeline, E2E Integration Testing</li>
                         </ul>
-                    </p>
-                </section>
-                <section class="content-section" id="links-section">
-                    <h1><a href="#links-section">§</a> Links</h1>
-                    <p>
-                        Some cool links:
-                    </p>
-                    <table class="gallery">
-                      <li>
-                        <a href="https://github.com/eyssab">Github</a>
                     </li>
-                      <li>
-                        <a href="https://eyssa-benhida.itch.io">Itch.io</a>
+                    <li>
+                        <strong>Software Engineering Intern</strong> at Google
+                        <ul>
+                            <li><strong>Duration:</strong> Summer 2024</li>
+                            <li><strong>Description:</strong> Incoming intern</li>
+                            <li><strong>Technologies:</strong> Go, gRPC</li>
+                        </ul>
                     </li>
-                      <li>
-                        <a href="https://eyssa-benhida.itch.io/the-hunted">Website</a>
+                </ul>
+            </section>
+            
+            <section class="content-section" id="projects-section">
+                <h1><a href="#projects-section">§</a> Projects</h1>
+            
+                <ul>
+                    <li>
+                        <strong>Sociocoders</strong> - AI Learning Management System, Forum and videos with AI-generated questions, answers, and grading
+                        <ul>
+                            <li><strong>Technologies:</strong> Python, Vue, CSS, HTML, Javascript, Django, Google Auth, OpenAI, Vue</li>
+                            <li><a href="https://github.com/eyssab/Sociocoders">Github Link</a></li>
+                        </ul>
                     </li>
-                </section>
-                <!--
-                Adder section: Future Plans
-                -->
+                    <li>
+                        <strong>Fleet Tracker</strong> - Android and iOS fleet tracker application for small organizations and school systems
+                        <ul>
+                            <li><strong>Technologies:</strong> Javascript, React Native Expo, AWS Amplify, GraphQL, Android Studio, Google Maps API</li>
+                            <li><a href="https://github.com/eyssab/Fleet-Tracker">Github Link</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Answer Sheet - Exams Made Easy</strong> - Android exam answer sheet generator, grader, storage, and timer
+                        <ul>
+                            <li><strong>Technologies:</strong> Java, Android Studio</li>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.easygrader.exampracapp">Play Store Link</a></li>
+                            <li><a href="https://github.com/eyssab/exampracApp">Github Link</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Wonky Golf</strong> - High school Senior Internship project, 3D Mini Golf game
+                        <ul>
+                            <li><strong>Technologies:</strong> C#, Unity, Blender, Krita</li>
+                            <li><a href="https://eyssa-benhida.itch.io/wonky-golf">Itch.io</a></li>
+                            <li><a href="https://github.com/eyssab/WonkyGolf">Github Link</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>The Hunted</strong> - MIT BLUEPRINT Hackathon Submission, AI 3D Hide and Seek game
+                        <ul>
+                            <li><strong>Technologies:</strong> C#, Unity</li>
+                            <li><a href="https://eyssa-benhida.itch.io/the-hunted">Itch.io</a></li>
+                            <li><a href="https://github.com/eyssab/The-Hunted">Github Link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="content-section" id="courses-section">
+                <h1><a href="#courses-section">§</a> Courses Taken</h1>
+                <ul>
+                    <li>
+                        <strong>CS 311 - Algorithms</strong> - UMass Amherst
+                    </li>
+                    <li>
+                        <strong>CS 187 - Data Structures </strong> - UMass Amherst
+                    </li>
+                    <li>
+                        <strong>CS 520 - Software Engineering</strong> - UMass Amherst
+                    </li>
+                    <li>
+                        <strong>CS 377 - Operating Systems</strong> - UMass Amherst
+                    </li>
+                    <li>
+                        <strong>CS 345 - Database Management </strong> - UMass Amherst
+                    </li>
+                    <li>
+                        <strong>CS 220 - Programming Methodology</strong> - UMass Amherst
+                    </li>
+                    <li>
+                        <strong>CS 326 - Web Development</strong> - UMass Amherst
+                    </li>
+                    <li>
+                        <strong>CS 453 - Computer Networks </strong> - UMass Amherst
+                    </li>
+                    <li>
+                        <strong>CS 590 - Wireless Networks</strong> - UMass Amherst
+                    </li>
+                    <li>
+                        <strong>CS 373 - Computer Graphics</strong> - UMass Amherst
+                    </li>
+                </ul>
+            </section>
+
             <section class="future-section" id="future-section">
                 <h1><a href="#future-section">§</a>Future</h1>
                 <p>
-                    I plan to graduate from the UMass Amherst by 2025, and within that time I plan to
-                    become a better coder by taking challenging courses, working on side projects, getting
-                    internships, and much more!
+                    I plan to graduate from the UMass Amherst Fall 2024, complete my summer internship at Google, and apply to Cornell University for Masters of Engineering in Computer Science
                 </p>
             </section>
-            </div>
-
         </div>
+    </div>
+    
 
-            <!--
-            And that's the end of our content. Now let's just include a footer
-            and we'll be done.
-            -->
-            <div id="footer">
-                <!-- Horizontal line. -->
-                <hr />
+    <div id="footer">
+        <hr />
+        <p>
+            Unless otherwise specified, the content on this website is
+            licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                Creative Commons Attribution-ShareAlike 4.0 International
+                License</a>
+        </p>
+    </div>
+    </div>
+</body>
 
-                <!-- And a small copyright notice at the bottom. -->
-                <p>
-                    Unless otherwise specified, the content on this website is
-                    licensed under a <a rel="license"
-                    href="http://creativecommons.org/licenses/by-sa/4.0/">
-                    Creative Commons Attribution-ShareAlike 4.0 International
-                    License</a>
-                </p>
-            </div>
-        </div>
-    </body>
 </html>
